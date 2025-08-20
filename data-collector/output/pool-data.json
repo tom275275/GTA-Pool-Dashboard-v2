@@ -1,0 +1,306 @@
+{
+  "metadata": {
+    "last_updated": "2025-08-20",
+    "season": "Summer 2025",
+    "collection_time": "2025-08-20T18:37:02.334Z",
+    "municipalities": 3,
+    "total_pools": 6,
+    "total_child_friendly_sessions": 19
+  },
+  "pools": [
+    {
+      "id": "mississauga-river-grove-cmty-centre",
+      "name": "River Grove Cmty Centre",
+      "municipality": "Mississauga",
+      "province": "ON",
+      "address": "",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "13:55",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-20",
+            "end": "2026-01-03"
+          }
+        },
+        {
+          "day_of_week": "Sunday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:05",
+          "end_time": "14:25",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-21",
+            "end": "2026-01-04"
+          }
+        },
+        {
+          "day_of_week": "Sunday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "14:35",
+          "end_time": "15:55",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-21",
+            "end": "2026-01-04"
+          }
+        },
+        {
+          "day_of_week": "Friday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:30",
+          "end_time": "20:55",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-26",
+            "end": "2026-01-02"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mississauga-meadowvale-cmty-centre",
+      "name": "Meadowvale Cmty Centre",
+      "municipality": "Mississauga",
+      "province": "ON",
+      "address": "",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Friday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:35",
+          "end_time": "21:00",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-05",
+            "end": "2025-12-12"
+          }
+        },
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:35",
+          "end_time": "14:55",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-06",
+            "end": "2025-12-13"
+          }
+        },
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "18:35",
+          "end_time": "20:00",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-06",
+            "end": "2025-12-13"
+          }
+        },
+        {
+          "day_of_week": "Sunday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:05",
+          "end_time": "14:30",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-07",
+            "end": "2025-12-14"
+          }
+        },
+        {
+          "day_of_week": "Sunday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "14:45",
+          "end_time": "16:10",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-07",
+            "end": "2025-12-14"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mississauga-clarkson-cmty-centre",
+      "name": "Clarkson Cmty Centre",
+      "municipality": "Mississauga",
+      "province": "ON",
+      "address": "",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Tuesday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:30",
+          "end_time": "21:00",
+          "age_restriction": "6m +,",
+          "date_range": {
+            "start": "2025-09-09",
+            "end": "2025-12-30"
+          }
+        },
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:00",
+          "end_time": "14:30",
+          "age_restriction": "6m +,",
+          "date_range": {
+            "start": "2025-09-13",
+            "end": "2026-01-03"
+          }
+        },
+        {
+          "day_of_week": "Sunday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:00",
+          "end_time": "14:30",
+          "age_restriction": "6m +,",
+          "date_range": {
+            "start": "2025-09-14",
+            "end": "2026-01-04"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mississauga-carmen-corbasson-cmty-centre",
+      "name": "Carmen Corbasson Cmty Centre",
+      "municipality": "Mississauga",
+      "province": "ON",
+      "address": "",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "16:00",
+          "end_time": "17:40",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-03",
+            "end": "2026-01-04"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mississauga-burnhamthorpe-cmty-centre",
+      "name": "Burnhamthorpe Cmty Centre",
+      "municipality": "Mississauga",
+      "province": "ON",
+      "address": "",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "14:55",
+          "age_restriction": "All ages,",
+          "date_range": {
+            "start": "2025-09-06",
+            "end": "2026-01-03"
+          }
+        },
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "16:00",
+          "end_time": "17:25",
+          "age_restriction": "All ages,",
+          "date_range": {
+            "start": "2025-09-06",
+            "end": "2026-01-03"
+          }
+        },
+        {
+          "day_of_week": "Sunday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:00",
+          "end_time": "14:25",
+          "age_restriction": "All ages,",
+          "date_range": {
+            "start": "2025-09-07",
+            "end": "2026-01-04"
+          }
+        },
+        {
+          "day_of_week": "Friday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:35",
+          "end_time": "21:00",
+          "age_restriction": "All ages,",
+          "date_range": {
+            "start": "2025-09-05",
+            "end": "2026-01-02"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mississauga-huron-park-rec-centre",
+      "name": "Huron Park Rec Centre",
+      "municipality": "Mississauga",
+      "province": "ON",
+      "address": "",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Saturday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "14:05",
+          "end_time": "15:25",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-20",
+            "end": "2026-01-04"
+          }
+        },
+        {
+          "day_of_week": "Friday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:35",
+          "end_time": "21:00",
+          "age_restriction": "6 yrs +,",
+          "date_range": {
+            "start": "2025-09-26",
+            "end": "2026-01-02"
+          }
+        }
+      ]
+    }
+  ]
+}

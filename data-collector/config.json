@@ -1,0 +1,47 @@
+{
+  "municipalities": {
+    "oakville": {
+      "name": "Oakville",
+      "baseUrl": "https://townofoakville.perfectmind.com/24974",
+      "pageUrl": "https://townofoakville.perfectmind.com/24974/Clients/BookMe4BookingPages/Classes",
+      "apiUrl": "https://townofoakville.perfectmind.com/24974/Clients/BookMe4BookingPagesV2/ClassesV2",
+      "calendarId": "be3ea5f4-ef36-101d-d685-729ff55fe6b0",
+      "widgetId": "9defe1d4-77c5-443d-9302-4960d6d2ee7b",
+      "system": "perfectmind"
+    },
+    "burlington": {
+      "name": "Burlington",
+      "baseUrl": "https://cityofburlington.perfectmind.com/22818",
+      "pageUrl": "https://cityofburlington.perfectmind.com/22818/Clients/BookMe4BookingPages/Classes",
+      "apiUrl": "https://cityofburlington.perfectmind.com/22818/Clients/BookMe4BookingPagesV2/ClassesV2",
+      "calendarId": "598fc12b-1445-4708-8de3-4a997690a6a3",
+      "widgetId": "9fa0aeb1-bf02-4386-8a83-3a6749a37571",
+      "system": "perfectmind"
+    },
+    "mississauga": {
+      "name": "Mississauga",
+      "apiUrl": "https://anc.ca.apm.activecommunities.com/activemississauga/rest/activities/list?locale=en-US",
+      "system": "activenet"
+    }
+  },
+  "dateRange": {
+    "start": "2025-09-01",
+    "end": "2025-12-31"
+  },
+  "childFriendlyTypes": [
+    "Fun Swim",
+    "Leisure Swim",
+    "Public Swim",
+    "Family Swim",
+    "Parent and Tot",
+    "Parent & Tot",
+    "Combo Swim"
+  ],
+  "excludeTypes": [
+    "Adult Leisure Swim",
+    "Lane Swim",
+    "Length Swim",
+    "Adult Swim",
+    "Aquafit"
+  ]
+}

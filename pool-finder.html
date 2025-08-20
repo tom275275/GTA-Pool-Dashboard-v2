@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Pool Schedule Finder</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        input[type="time"], select {
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            transition: border-color 0.3s;
+        }
+
+        input[type="time"]:focus, select:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .status.loading {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status.success {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+
+        .status.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .results {
+            margin-top: 25px;
+        }
+
+        .pool-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #4a90e2;
+        }
+
+        .pool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pool-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .pool-municipality {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .distance {
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .swim-session {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .session-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .swim-type {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .swim-time {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #27ae60;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .age-restriction {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .no-results img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .no-results h3 {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .no-results p {
+            color: #95a5a6;
+        }
+
+        .data-info {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+
+        .export-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .mobile-responsive {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .control-group {
+                width: 100%;
+            }
+
+            .mobile-responsive {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .pool-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .swim-session {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4a90e2;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏊 Pool Schedule Finder</h1>
+        <p>Find child-friendly swim times across the GTA</p>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="timeFilter">Show swims after:</label>
+            <input type="time" id="timeFilter" value="14:00">
+        </div>
+        
+        <div class="control-group">
+            <label for="dayFilter">Day of week:</label>
+            <select id="dayFilter">
+                <option value="today">Today</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+        </div>
+        
+        <div class="mobile-responsive">
+            <button class="btn-primary" onclick="findSwims()">
+                🔍 Find Available Swims
+            </button>
+            <button class="btn-secondary" onclick="showAllPools()">
+                📍 View All Pools
+            </button>
+        </div>
+    </div>
+
+    <div id="status"></div>
+    <div id="dataInfo" class="data-info"></div>
+    <div id="results" class="results"></div>
+
+    <div class="export-section">
+        <h3>📱 App Features</h3>
+        <p><strong>Distance Sorting:</strong> Pools are sorted by distance from Mississauga (your home base)</p>
+        <p><strong>Child-Friendly Only:</strong> Shows only swims suitable for ages 5 and under</p>
+        <p><strong>Real-Time Filtering:</strong> Updates instantly as you change time and day preferences</p>
+        <p><strong>Offline Ready:</strong> Works without internet once loaded</p>
+        
+        <div style="margin-top: 20px;">
+            <button class="btn-secondary" onclick="exportData()">💾 Export Pool Data</button>
+            <button class="btn-secondary" onclick="printSchedule()">🖨️ Print Current Results</button>
+        </div>
+    </div>
+
+    <script>
+        // Home coordinates (Mississauga area)
+        const HOME_COORDS = { lat: 43.5890, lng: -79.7300 };
+
+        // Sample pool data (will be replaced with real data from collector)
+        let poolData = {
+            "metadata": {
+                "last_updated": "2025-08-20",
+                "season": "Summer 2025",
+                "collection_time": "2025-08-20T18:37:02.334Z",
+                "municipalities": 3,
+                "total_pools": 6,
+                "total_child_friendly_sessions": 19
+            },
+            "pools": [
+                {
+                    "id": "mississauga-river-grove-cmty-centre",
+                    "name": "River Grove Cmty Centre",
+                    "municipality": "Mississauga",
+                    "province": "ON",
+                    "address": "",
+                    "latitude": null,
+                    "longitude": null,
+                    "schedules": [
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "12:30",
+                            "end_time": "13:55",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-20",
+                                "end": "2026-01-03"
+                            }
+                        },
+                        {
+                            "day_of_week": "Sunday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:05",
+                            "end_time": "14:25",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-21",
+                                "end": "2026-01-04"
+                            }
+                        },
+                        {
+                            "day_of_week": "Sunday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "14:35",
+                            "end_time": "15:55",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-21",
+                                "end": "2026-01-04"
+                            }
+                        },
+                        {
+                            "day_of_week": "Friday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "19:30",
+                            "end_time": "20:55",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-26",
+                                "end": "2026-01-02"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mississauga-meadowvale-cmty-centre",
+                    "name": "Meadowvale Cmty Centre",
+                    "municipality": "Mississauga",
+                    "province": "ON",
+                    "address": "",
+                    "latitude": null,
+                    "longitude": null,
+                    "schedules": [
+                        {
+                            "day_of_week": "Friday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "19:35",
+                            "end_time": "21:00",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-05",
+                                "end": "2025-12-12"
+                            }
+                        },
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:35",
+                            "end_time": "14:55",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-06",
+                                "end": "2025-12-13"
+                            }
+                        },
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "18:35",
+                            "end_time": "20:00",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-06",
+                                "end": "2025-12-13"
+                            }
+                        },
+                        {
+                            "day_of_week": "Sunday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:05",
+                            "end_time": "14:30",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-07",
+                                "end": "2025-12-14"
+                            }
+                        },
+                        {
+                            "day_of_week": "Sunday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "14:45",
+                            "end_time": "16:10",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-07",
+                                "end": "2025-12-14"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mississauga-clarkson-cmty-centre",
+                    "name": "Clarkson Cmty Centre",
+                    "municipality": "Mississauga",
+                    "province": "ON",
+                    "address": "",
+                    "latitude": null,
+                    "longitude": null,
+                    "schedules": [
+                        {
+                            "day_of_week": "Tuesday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "19:30",
+                            "end_time": "21:00",
+                            "age_restriction": "6m +,",
+                            "date_range": {
+                                "start": "2025-09-09",
+                                "end": "2025-12-30"
+                            }
+                        },
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:00",
+                            "end_time": "14:30",
+                            "age_restriction": "6m +,",
+                            "date_range": {
+                                "start": "2025-09-13",
+                                "end": "2026-01-03"
+                            }
+                        },
+                        {
+                            "day_of_week": "Sunday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:00",
+                            "end_time": "14:30",
+                            "age_restriction": "6m +,",
+                            "date_range": {
+                                "start": "2025-09-14",
+                                "end": "2026-01-04"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mississauga-carmen-corbasson-cmty-centre",
+                    "name": "Carmen Corbasson Cmty Centre",
+                    "municipality": "Mississauga",
+                    "province": "ON",
+                    "address": "",
+                    "latitude": null,
+                    "longitude": null,
+                    "schedules": [
+                        {
+                            "day_of_week": "Wednesday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "16:00",
+                            "end_time": "17:40",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-03",
+                                "end": "2026-01-04"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mississauga-burnhamthorpe-cmty-centre",
+                    "name": "Burnhamthorpe Cmty Centre",
+                    "municipality": "Mississauga",
+                    "province": "ON",
+                    "address": "",
+                    "latitude": null,
+                    "longitude": null,
+                    "schedules": [
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:30",
+                            "end_time": "14:55",
+                            "age_restriction": "All ages,",
+                            "date_range": {
+                                "start": "2025-09-06",
+                                "end": "2026-01-03"
+                            }
+                        },
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "16:00",
+                            "end_time": "17:25",
+                            "age_restriction": "All ages,",
+                            "date_range": {
+                                "start": "2025-09-06",
+                                "end": "2026-01-03"
+                            }
+                        },
+                        {
+                            "day_of_week": "Sunday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "13:00",
+                            "end_time": "14:25",
+                            "age_restriction": "All ages,",
+                            "date_range": {
+                                "start": "2025-09-07",
+                                "end": "2026-01-04"
+                            }
+                        },
+                        {
+                            "day_of_week": "Friday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "19:35",
+                            "end_time": "21:00",
+                            "age_restriction": "All ages,",
+                            "date_range": {
+                                "start": "2025-09-05",
+                                "end": "2026-01-02"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mississauga-huron-park-rec-centre",
+                    "name": "Huron Park Rec Centre",
+                    "municipality": "Mississauga",
+                    "province": "ON",
+                    "address": "",
+                    "latitude": null,
+                    "longitude": null,
+                    "schedules": [
+                        {
+                            "day_of_week": "Saturday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "14:05",
+                            "end_time": "15:25",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-20",
+                                "end": "2026-01-04"
+                            }
+                        },
+                        {
+                            "day_of_week": "Friday",
+                            "swim_type": "Fun Swim",
+                            "is_child_friendly": true,
+                            "start_time": "19:35",
+                            "end_time": "21:00",
+                            "age_restriction": "6 yrs +,",
+                            "date_range": {
+                                "start": "2025-09-26",
+                                "end": "2026-01-02"
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+
+        /**
+         * Calculate distance between two coordinates using Haversine formula
+         */
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Earth's radius in kilometers
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = 
+                Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+                Math.sin(dLon/2) * Math.sin(dLon/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+
+        /**
+         * Get distance from home to pool
+         */
+        function getPoolDistance(pool) {
+            if (!pool.latitude || !pool.longitude) return 999; // Unknown distance
+            return calculateDistance(HOME_COORDS.lat, HOME_COORDS.lng, pool.latitude, pool.longitude);
+        }
+
+        /**
+         * Format distance for display
+         */
+        function formatDistance(distance) {
+            if (distance >= 999) return 'Distance unknown';
+            return `${distance.toFixed(1)} km away`;
+        }
+
+        /**
+         * Get current day of week
+         */
+        function getCurrentDay() {
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return days[new Date().getDay()];
+        }
+
+        /**
+         * Convert 24-hour time to 12-hour format
+         */
+        function formatTime(time24) {
+            if (!time24) return '';
+            const [hours, minutes] = time24.split(':');
+            const hour = parseInt(hours);
+            const ampm = hour >= 12 ? 'PM' : 'AM';
+            const displayHour = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
+            return `${displayHour}:${minutes} ${ampm}`;
+        }
+
+        /**
+         * Check if a session is available based on time filter
+         */
+        function isSessionAvailable(session, afterTime) {
+            if (!afterTime) return true;
+            return session.start_time >= afterTime;
+        }
+
+        /**
+         * Show status message
+         */
+        function showStatus(message, type = 'loading') {
+            const statusEl = document.getElementById('status');
+            statusEl.innerHTML = type === 'loading' ? 
+                `<div class="status ${type}"><div class="loading-spinner"></div>${message}</div>` :
+                `<div class="status ${type}">${message}</div>`;
+        }
+
+        /**
+         * Clear status message
+         */
+        function clearStatus() {
+            document.getElementById('status').innerHTML = '';
+        }
+
+        /**
+         * Update data info display
+         */
+        function updateDataInfo() {
+            const dataInfoEl = document.getElementById('dataInfo');
+            const metadata = poolData.metadata;
+            dataInfoEl.innerHTML = `
+                📊 <strong>Data Summary:</strong> 
+                ${metadata.total_pools} pools • 
+                ${metadata.total_child_friendly_sessions} child-friendly sessions • 
+                Last updated: ${metadata.last_updated} (${metadata.season})
+            `;
+        }
+
+        /**
+         * Find and display available swims
+         */
+        function findSwims() {
+            showStatus('Finding available swims...', 'loading');
+            
+            const timeFilter = document.getElementById('timeFilter').value;
+            const dayFilter = document.getElementById('dayFilter').value;
+            const targetDay = dayFilter === 'today' ? getCurrentDay() : dayFilter;
+            
+            // Filter pools with available sessions
+            const availablePools = poolData.pools
+                .map(pool => ({
+                    ...pool,
+                    distance: getPoolDistance(pool),
+                    availableSessions: pool.schedules.filter(session => 
+                        session.day_of_week === targetDay && 
+                        isSessionAvailable(session, timeFilter)
+                    )
+                }))
+                .filter(pool => pool.availableSessions.length > 0)
+                .sort((a, b) => a.distance - b.distance);
+
+            setTimeout(() => {
+                clearStatus();
+                displayResults(availablePools, `${targetDay} swims after ${formatTime(timeFilter)}`);
+            }, 500);
+        }
+
+        /**
+         * Show all pools regardless of schedule
+         */
+        function showAllPools() {
+            showStatus('Loading all pools...', 'loading');
+            
+            const allPools = poolData.pools
+                .map(pool => ({
+                    ...pool,
+                    distance: getPoolDistance(pool),
+                    availableSessions: pool.schedules
+                }))
+                .sort((a, b) => a.distance - b.distance);
+
+            setTimeout(() => {
+                clearStatus();
+                displayResults(allPools, 'All pools and schedules');
+            }, 500);
+        }
+
+        /**
+         * Display search results
+         */
+        function displayResults(pools, title) {
+            const resultsEl = document.getElementById('results');
+            
+            if (pools.length === 0) {
+                resultsEl.innerHTML = `
+                    <div class="no-results">
+                        <div style="font-size: 4em;">🏊‍♀️</div>
+                        <h3>No swims found</h3>
+                        <p>Try adjusting your time or day filters</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `<h2 style="margin-bottom: 20px; color: #2c3e50;">📍 ${title} (${pools.length} locations)</h2>`;
+            
+            pools.forEach(pool => {
+                html += `
+                    <div class="pool-card">
+                        <div class="pool-header">
+                            <div>
+                                <h3 class="pool-name">${pool.name}</h3>
+                                <div class="pool-municipality">${pool.municipality}, ${pool.province}</div>
+                            </div>
+                            <div class="distance">${formatDistance(pool.distance)}</div>
+                        </div>
+                        
+                        <div class="sessions">
+                `;
+                
+                pool.availableSessions.forEach(session => {
+                    html += `
+                        <div class="swim-session">
+                            <div class="session-info">
+                                <div class="swim-type">${session.swim_type}</div>
+                                <div class="age-restriction">${session.age_restriction}</div>
+                            </div>
+                            <div class="swim-time">
+                                ⏰ ${formatTime(session.start_time)} - ${formatTime(session.end_time)}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+            
+            resultsEl.innerHTML = html;
+        }
+
+        /**
+         * Export pool data as JSON file
+         */
+        function exportData() {
+            const dataStr = JSON.stringify(poolData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = `pool-data-backup-${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+            
+            showStatus('Data exported successfully!', 'success');
+            setTimeout(clearStatus, 3000);
+        }
+
+        /**
+         * Print current results
+         */
+        function printSchedule() {
+            window.print();
+        }
+
+        /**
+         * Initialize the app
+         */
+        function initApp() {
+            updateDataInfo();
+            
+            // Set today as default if it's weekend (typical swimming day)
+            const today = getCurrentDay();
+            if (today === 'Saturday' || today === 'Sunday') {
+                document.getElementById('dayFilter').value = 'today';
+                // Auto-search for today's swims
+                findSwims();
+            }
+            
+            console.log('🏊 Pool Schedule Finder loaded successfully!');
+            console.log(`📊 Data: ${poolData.pools.length} pools, ${poolData.metadata.total_child_friendly_sessions} sessions`);
+        }
+
+        // Load app when page is ready
+        document.addEventListener('DOMContentLoaded', initApp);
+
+        // Auto-update when filters change
+        document.getElementById('timeFilter').addEventListener('change', () => {
+            if (document.getElementById('results').innerHTML.trim()) {
+                findSwims();
+            }
+        });
+        
+        document.getElementById('dayFilter').addEventListener('change', () => {
+            if (document.getElementById('results').innerHTML.trim()) {
+                findSwims();
+            }
+        });
+    </script>
+</body>
+</html>
