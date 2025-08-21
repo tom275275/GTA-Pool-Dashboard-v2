@@ -160,11 +160,13 @@ class PerfectMindCollector {
   transformData(rawData, municipality, childFriendlyTypes, excludeTypes) {
     const pools = new Map();
     
-    if (!rawData || !rawData.Classes) {
+    // Handle both 'Classes' and 'classes' properties
+    const classes = rawData?.Classes || rawData?.classes;
+    if (!rawData || !classes) {
       return [];
     }
     
-    for (const event of rawData.Classes) {
+    for (const event of classes) {
       if (!this.isChildFriendly(event.EventName, event.AgeRestrictions || '', childFriendlyTypes, excludeTypes)) {
         continue;
       }
@@ -216,8 +218,15 @@ class PerfectMindCollector {
     console.log(`✓ Collecting ${config.name} schedules...`);
     const rawData = await this.fetchScheduleData(config, token, dateRange);
     
+    // Debug: log what we got back
+    console.log(`  Raw response keys:`, Object.keys(rawData || {}));
+    if (rawData && rawData.Classes && rawData.Classes.length === 0) {
+      console.log(`  No classes found in date range ${dateRange.start} to ${dateRange.end}`);
+    }
+    
     const pools = this.transformData(rawData, config.name, childFriendlyTypes, excludeTypes);
-    console.log(`  (${rawData.Classes ? rawData.Classes.length : 0} total sessions, ${pools.reduce((sum, pool) => sum + pool.schedules.length, 0)} child-friendly)`);
+    const totalSessions = (rawData?.Classes || rawData?.classes)?.length || 0;
+    console.log(`  (${totalSessions} total sessions, ${pools.reduce((sum, pool) => sum + pool.schedules.length, 0)} child-friendly)`);
     
     return pools;
   }

@@ -1,13 +1,981 @@
 {
   "metadata": {
-    "last_updated": "2025-08-20",
+    "last_updated": "2025-08-21",
     "season": "Summer 2025",
-    "collection_time": "2025-08-20T18:37:02.334Z",
+    "collection_time": "2025-08-21T14:33:39.284Z",
     "municipalities": 3,
-    "total_pools": 6,
-    "total_child_friendly_sessions": 19
+    "total_pools": 22,
+    "total_child_friendly_sessions": 85
   },
   "pools": [
+    {
+      "id": "oakville-brookdale-pool",
+      "name": "Brookdale Pool",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "1215 Bridge Rd. , Oakville, ON L6L 2C1",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "10:30",
+          "end_time": "12:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:15",
+          "end_time": "16:45",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "18:30",
+          "end_time": "20:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "10:30",
+          "end_time": "12:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:15",
+          "end_time": "16:45",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-queen-elizabeth-park-community-and-cultural-centre",
+      "name": "Queen Elizabeth Park Community and Cultural Centre",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "2302 Bridge Rd. , Oakville, ON L6L 2G8",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "11:30",
+          "end_time": "13:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "19:00",
+          "end_time": "20:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "11:30",
+          "end_time": "13:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-bronte-pool",
+      "name": "Bronte Pool",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "2184 Hixon St , Oakville, ON L6L 1T4",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "14:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "14:00",
+          "end_time": "15:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "18:30",
+          "end_time": "20:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "14:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "14:00",
+          "end_time": "15:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-wedgewood-pool",
+      "name": "Wedgewood Pool",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "351 Cairncroft Rd. , Oakville, ON L6J 4M5",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "16:00",
+          "end_time": "17:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "16:00",
+          "end_time": "17:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-falgarwood-pool",
+      "name": "Falgarwood Pool",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "1349 Gainsborough Dr. , Oakville, ON L6H 2H7",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:00",
+          "end_time": "16:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "18:30",
+          "end_time": "20:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:00",
+          "end_time": "16:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-lions-pool",
+      "name": "Lions Pool",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "159 Felan Ave. , Oakville, ON L6K 2X7",
+      "latitude": 43.439757,
+      "longitude": -79.680585,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "14:30",
+          "end_time": "16:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "17:00",
+          "end_time": "18:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "14:30",
+          "end_time": "16:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "17:00",
+          "end_time": "18:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-oakville-trafalgar-community-centre-325-reynolds",
+      "name": "Oakville Trafalgar Community Centre-325 Reynolds",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "327 Reynolds St., Oakville, ON L6J 3L5",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:00",
+          "end_time": "16:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "16:30",
+          "end_time": "18:00",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-glen-abbey-community-centre",
+      "name": "Glen Abbey Community Centre",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "1415 Third Line, Oakville, ON L6M 3G2",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:00",
+          "end_time": "16:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "15:00",
+          "end_time": "16:30",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oakville-white-oaks-pool",
+      "name": "White Oaks Pool",
+      "municipality": "Oakville",
+      "province": "ON",
+      "address": "1330 Montclair Dr. , Oakville, ON L6H 1Z5",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "19:45",
+          "end_time": "21:15",
+          "age_restriction": "All ages",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-centennial-pool",
+      "name": "Centennial Pool",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "5151 New Street, Burlington, ON L7P 4J5",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "09:00",
+          "end_time": "13:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "09:00",
+          "end_time": "10:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-tansley-woods-community-centre",
+      "name": "Tansley Woods Community Centre",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "1996 Itabashi Way, Burlington, ON L7M 1C7",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "10:05",
+          "end_time": "11:25",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "13:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:35",
+          "end_time": "15:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:30",
+          "end_time": "21:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "10:05",
+          "end_time": "11:25",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "13:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:35",
+          "end_time": "15:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "17:30",
+          "end_time": "18:55",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "17:30",
+          "end_time": "19:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:00",
+          "end_time": "21:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-aldershot-pool",
+      "name": "Aldershot Pool",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "50 Fairwood Place W, Burlington, ON L7T 2M7",
+      "latitude": 43.299567,
+      "longitude": -79.794821,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "10:00",
+          "end_time": "11:55",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "19:05",
+          "end_time": "20:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "10:00",
+          "end_time": "11:55",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "13:35",
+          "end_time": "15:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-lasalle-park",
+      "name": "LaSalle Park",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "841 LaSalle Park Road, Burlington, ON L7M 1V7",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim – Walk In Only: Online Reservation is not available",
+          "is_child_friendly": true,
+          "start_time": "10:30",
+          "end_time": "18:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim – Walk In Only: Online Reservation is not available",
+          "is_child_friendly": true,
+          "start_time": "10:30",
+          "end_time": "18:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-nelson-community-centre",
+      "name": "Nelson Community Centre",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "4235 New Street, Burlington, ON L7L 1T3",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim- Walk in Only: Online reservation is not available",
+          "is_child_friendly": true,
+          "start_time": "11:45",
+          "end_time": "18:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Fun Swim- Walk in Only: Online reservation is not available",
+          "is_child_friendly": true,
+          "start_time": "11:45",
+          "end_time": "18:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Community Fun Swim Night – Join us for splash, sports, and a variety of themes!",
+          "is_child_friendly": true,
+          "start_time": "16:30",
+          "end_time": "18:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-angela-coughlan-pool",
+      "name": "Angela Coughlan Pool",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "2425 Upper Middle Road, Burlington, ON L7P 4R6",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "12:00",
+          "end_time": "14:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "14:45",
+          "end_time": "16:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "19:35",
+          "end_time": "21:00",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "12:00",
+          "end_time": "14:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "13:05",
+          "end_time": "14:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Fun Swim",
+          "is_child_friendly": true,
+          "start_time": "14:45",
+          "end_time": "16:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Combo Swim",
+          "is_child_friendly": true,
+          "start_time": "16:35",
+          "end_time": "19:10",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Leisure Swim",
+          "is_child_friendly": true,
+          "start_time": "16:35",
+          "end_time": "19:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burlington-mountainside-community-centre",
+      "name": "Mountainside Community Centre",
+      "municipality": "Burlington",
+      "province": "ON",
+      "address": "2205 Mount Forest Drive, Burlington, ON L7L 4L8",
+      "latitude": null,
+      "longitude": null,
+      "schedules": [
+        {
+          "day_of_week": "Wednesday",
+          "swim_type": "Fun Swim – Walk In Only: Online Reservation is not available",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "18:30",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-21",
+            "end": "2025-08-21"
+          }
+        },
+        {
+          "day_of_week": "Thursday",
+          "swim_type": "Fun Swim – Walk In Only: Online Reservation is not available",
+          "is_child_friendly": true,
+          "start_time": "12:30",
+          "end_time": "19:45",
+          "age_restriction": "0 to 110",
+          "date_range": {
+            "start": "2025-08-22",
+            "end": "2025-08-22"
+          }
+        }
+      ]
+    },
     {
       "id": "mississauga-river-grove-cmty-centre",
       "name": "River Grove Cmty Centre",

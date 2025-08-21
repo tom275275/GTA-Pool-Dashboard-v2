@@ -3,7 +3,7 @@
     "oakville": {
       "name": "Oakville",
       "baseUrl": "https://townofoakville.perfectmind.com/24974",
-      "pageUrl": "https://townofoakville.perfectmind.com/24974/Clients/BookMe4BookingPages/Classes",
+      "pageUrl": "https://townofoakville.perfectmind.com/24974/Clients/BookMe4BookingPages/Classes?calendarId=be3ea5f4-ef36-101d-d685-729ff55fe6b0&widgetId=9defe1d4-77c5-443d-9302-4960d6d2ee7b",
       "apiUrl": "https://townofoakville.perfectmind.com/24974/Clients/BookMe4BookingPagesV2/ClassesV2",
       "calendarId": "be3ea5f4-ef36-101d-d685-729ff55fe6b0",
       "widgetId": "9defe1d4-77c5-443d-9302-4960d6d2ee7b",
@@ -12,7 +12,7 @@
     "burlington": {
       "name": "Burlington",
       "baseUrl": "https://cityofburlington.perfectmind.com/22818",
-      "pageUrl": "https://cityofburlington.perfectmind.com/22818/Clients/BookMe4BookingPages/Classes",
+      "pageUrl": "https://cityofburlington.perfectmind.com/22818/Clients/BookMe4BookingPages/Classes?calendarId=598fc12b-1445-4708-8de3-4a997690a6a3&widgetId=9fa0aeb1-bf02-4386-8a83-3a6749a37571",
       "apiUrl": "https://cityofburlington.perfectmind.com/22818/Clients/BookMe4BookingPagesV2/ClassesV2",
       "calendarId": "598fc12b-1445-4708-8de3-4a997690a6a3",
       "widgetId": "9fa0aeb1-bf02-4386-8a83-3a6749a37571",
